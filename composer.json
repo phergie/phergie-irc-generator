@@ -1,0 +1,27 @@
+{
+    "minimum-stability": "dev",
+    "name": "phergie/phergie-irc-generator",
+    "description": "Generator for messages conforming to the IRC protocol",
+    "keywords": [ "irc", "generator" ],
+    "license": "BSD-2-Clause",
+    "support": {
+        "email": "team@phergie.org",
+        "irc": "irc://irc.freenode.net/phergie",
+        "issues": "https://github.com/phergie/phergie-irc-generator/issues",
+        "source": "https://github.com/phergie/phergie-irc-generator"
+    },
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Phergie": "src"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/phergie/phergie-irc-generator"
+        }
+    ]
+}
