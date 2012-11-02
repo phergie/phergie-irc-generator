@@ -32,6 +32,17 @@ $messages = $generator->ircPass('password')
     . $generator->ircUser('username', 'hostname', 'servername', 'realname')
     . $generator->ircJoin('#channel1,#channel2')
     . $generator->ircPrivsmg('#channel1', 'Hello world!');
+echo $messages;
+
+/*
+Output:
+PASS :password
+NICK :nick
+USER username hostname servername :realname
+JOIN :#channel1,#channel2
+PRIVMSG #channel1 :Hello world!
+
+*/
 
 ```
 
