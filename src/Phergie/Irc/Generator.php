@@ -62,211 +62,211 @@ class Generator implements GeneratorInterface
     }
 
     /**
-	 * Returns a PASS message.
+     * Returns a PASS message.
      *
      * @parm string $password
      * @return string
-	 */
-	public function ircPass($password)
-	{
+     */
+    public function ircPass($password)
+    {
         return $this->getIrcMessage('PASS', array($password));
-	}
+    }
 
     /**
-	 * Returns a NICK message.
+     * Returns a NICK message.
      *
      * @param string $nickname
      * @param int $hopcount
      * @return string
-	 */
-	public function ircNick($nickname, $hopcount = null)
-	{
+     */
+    public function ircNick($nickname, $hopcount = null)
+    {
         return $this->getIrcMessage('NICK', array($nickname, $hopcount));
-	}
+    }
 
     /**
-	 * Returns a USER message.
+     * Returns a USER message.
      *
      * @param string $username
      * @param string $hostname
      * @param string $servername
      * @param string $realname
      * @return string
-	 */
-	public function ircUser($username, $hostname, $servername, $realname)
-	{
+     */
+    public function ircUser($username, $hostname, $servername, $realname)
+    {
         return $this->getIrcMessage('USER', array($username, $hostname, $servername, $realname));
-	}
+    }
 
     /**
-	 * Returns a SERVER message.
+     * Returns a SERVER message.
      *
      * @param string $servername
      * @param int $hopcount
      * @param string $info
      * @return string
-	 */
-	public function ircServer($servername, $hopcount, $info)
-	{
+     */
+    public function ircServer($servername, $hopcount, $info)
+    {
         return $this->getIrcMessage('SERVER', array($servername, $hopcount, $info));
-	}
+    }
 
     /**
-	 * Returns an OPER message.
+     * Returns an OPER message.
      *
      * @param string $user
      * @param string $password
      * @return string
-	 */
-	public function ircOper($user, $password)
-	{
+     */
+    public function ircOper($user, $password)
+    {
         return $this->getIrcMessage('OPER', array($user, $password));
-	}
+    }
 
     /**
-	 * Returns a QUIT message.
+     * Returns a QUIT message.
      *
      * @param string $message
      * @return string
-	 */
-	public function ircQuit($message = null)
-	{
+     */
+    public function ircQuit($message = null)
+    {
         return $this->getIrcMessage('QUIT', array($message));
-	}
+    }
 
     /**
-	 * Returns an SQUIT message.
+     * Returns an SQUIT message.
      *
      * @param string $server
      * @param string $comment
      * @return string
-	 */
-	public function ircSquit($server, $comment)
-	{
+     */
+    public function ircSquit($server, $comment)
+    {
         return $this->getIrcMessage('SQUIT', array($server, $comment));
-	}
+    }
 
     /**
-	 * Returns a JOIN message.
+     * Returns a JOIN message.
      *
      * @param string $channels
      * @param string $keys
      * @return string
-	 */
-	public function ircJoin($channels, $keys = null)
-	{
+     */
+    public function ircJoin($channels, $keys = null)
+    {
         return $this->getIrcMessage('JOIN', array($channels, $keys));
-	}
+    }
 
     /**
-	 * Returns a PART message.
+     * Returns a PART message.
      *
      * @param string $channels
      * @return string
-	 */
-	public function ircPart($channels)
-	{
+     */
+    public function ircPart($channels)
+    {
         return $this->getIrcMessage('PART', array($channels));
-	}
+    }
 
     /**
-	 * Returns a MODE message.
+     * Returns a MODE message.
      *
      * @param string $target
      * @param string $mode
      * @param string $param
      * @return string
-	 */
-	public function ircMode($target, $mode, $param = null)
-	{
+     */
+    public function ircMode($target, $mode, $param = null)
+    {
         return $this->getIrcMessage('MODE', array($target, $mode, $param));
-	}
+    }
 
     /**
-	 * Returns a TOPIC message.
+     * Returns a TOPIC message.
      *
      * @param string $channel
      * @param string $topic
      * @return string
-	 */
-	public function ircTopic($channel, $topic = null)
-	{
+     */
+    public function ircTopic($channel, $topic = null)
+    {
         return $this->getIrcMessage('TOPIC', array($channel, $topic));
-	}
+    }
 
     /**
-	 * Returns a NAMES message.
+     * Returns a NAMES message.
      *
      * @param string $channels
      * @return string
-	 */
-	public function ircNames($channels)
-	{
+     */
+    public function ircNames($channels)
+    {
         return $this->getIrcMessage('NAMES', array($channels));
-	}
+    }
 
     /**
-	 * Returns a LIST message.
+     * Returns a LIST message.
      *
      * @param string $channels
      * @param string $server
      * @return string
-	 */
-	public function ircList($channels = null, $server = null)
-	{
+     */
+    public function ircList($channels = null, $server = null)
+    {
         return $this->getIrcMessage('LIST', array($channels, $server));
-	}
+    }
 
     /**
-	 * Returns an INVITE message.
+     * Returns an INVITE message.
      *
      * @param string $nickname
      * @param string $channel
      * @return string
-	 */
-	public function ircInvite($nickname, $channel)
-	{
+     */
+    public function ircInvite($nickname, $channel)
+    {
         return $this->getIrcMessage('INVITE', array($nickname, $channel));
-	}
+    }
 
     /**
-	 * Returns a KICK message.
+     * Returns a KICK message.
      *
      * @param string $channel
      * @param string $user
      * @param string $comment
      * @return string
-	 */
-	public function ircKick($channel, $user, $comment = null)
-	{
+     */
+    public function ircKick($channel, $user, $comment = null)
+    {
         return $this->getIrcMessage('KICK', array($channel, $user, $comment));
-	}
+    }
 
     /**
-	 * Returns a VERSION message.
+     * Returns a VERSION message.
      *
      * @param string $server
      * @return string
-	 */
-	public function ircVersion($server = null)
-	{
+     */
+    public function ircVersion($server = null)
+    {
         return $this->getIrcMessage('VERSION', array($server));
-	}
+    }
 
     /**
-	 * Returns a STATS message.
+     * Returns a STATS message.
      *
      * @param string $query
      * @param string $server
      * @return string
-	 */
-	public function ircStats($query, $server = null)
-	{
+     */
+    public function ircStats($query, $server = null)
+    {
         return $this->getIrcMessage('STATS', array($query, $server));
-	}
+    }
 
     /**
-	 * Returns a LINKS message.
+     * Returns a LINKS message.
      *
      * Note that the parameter order of this method is reversed with respect to
      * the corresponding IRC message to alleviate the need to explicitly specify
@@ -275,244 +275,244 @@ class Generator implements GeneratorInterface
      * @param string $servermask
      * @param string $remoteserver
      * @return string
-	 */
-	public function ircLinks($servermask = null, $remoteserver = null)
-	{
+     */
+    public function ircLinks($servermask = null, $remoteserver = null)
+    {
         return $this->getIrcMessage('LINKS', array($remoteserver, $servermask));
-	}
+    }
 
     /**
-	 * Returns a TIME message.
+     * Returns a TIME message.
      *
      * @param string $server
      * @return string
-	 */
-	public function ircTime($server = null)
-	{
+     */
+    public function ircTime($server = null)
+    {
         return $this->getIrcMessage('TIME', array($server));
-	}
+    }
 
     /**
-	 * Returns a CONNECT message.
+     * Returns a CONNECT message.
      *
      * @param string $targetserver
      * @param int $port
      * @param string $remoteserver
      * @return string
-	 */
-	public function ircConnect($targetserver, $port = null, $remoteserver = null)
-	{
+     */
+    public function ircConnect($targetserver, $port = null, $remoteserver = null)
+    {
         return $this->getIrcMessage('CONNECT', array($targetserver, $port, $remoteserver));
-	}
+    }
 
     /**
-	 * Returns a TRACE message.
+     * Returns a TRACE message.
      *
      * @param string $server
      * @return string
-	 */
-	public function ircTrace($server = null)
-	{
+     */
+    public function ircTrace($server = null)
+    {
         return $this->getIrcMessage('TRACE', array($server));
-	}
+    }
 
     /**
-	 * Returns an ADMIN message.
+     * Returns an ADMIN message.
      *
      * @param string $server
      * @return string
-	 */
-	public function ircAdmin($server = null)
-	{
+     */
+    public function ircAdmin($server = null)
+    {
         return $this->getIrcMessage('ADMIN', array($server));
-	}
+    }
 
     /**
-	 * Returns an INFO message.
+     * Returns an INFO message.
      *
      * @param string $server
      * @return string
-	 */
-	public function ircInfo($server = null)
-	{
+     */
+    public function ircInfo($server = null)
+    {
         return $this->getIrcMessage('INFO', array($server));
-	}
+    }
 
     /**
-	 * Returns a PRIVMSG message.
+     * Returns a PRIVMSG message.
      *
      * @param string $receivers
      * @param string $text
      * @return string
-	 */
-	public function ircPrivmsg($receivers, $text)
-	{
+     */
+    public function ircPrivmsg($receivers, $text)
+    {
         return $this->getIrcMessage('PRIVMSG', array($receivers, $text));
-	}
+    }
 
     /**
-	 * Returns a NOTICE message.
+     * Returns a NOTICE message.
      *
      * @param string $nickname
      * @param string $text
      * @return string
-	 */
-	public function ircNotice($nickname, $text)
-	{
+     */
+    public function ircNotice($nickname, $text)
+    {
         return $this->getIrcMessage('NOTICE', array($nickname, $text));
-	}
+    }
 
     /**
-	 * Returns a WHO message.
+     * Returns a WHO message.
      *
      * @param string $name
      * @param string $o
      * @return string
-	 */
-	public function ircWho($name, $o = null)
-	{
+     */
+    public function ircWho($name, $o = null)
+    {
         return $this->getIrcMessage('WHO', array($name, $o));
-	}
+    }
 
     /**
-	 * Returns a WHOIS message.
+     * Returns a WHOIS message.
      *
      * @param string $server
      * @param string $nickmasks
      * @return string
-	 */
-	public function ircWhois($server, $nickmasks)
-	{
+     */
+    public function ircWhois($server, $nickmasks)
+    {
         return $this->getIrcMessage('WHOIS', array($server, $nickmasks));
-	}
+    }
 
     /**
-	 * Returns a WHOWAS message.
+     * Returns a WHOWAS message.
      *
      * @param string $nickname
      * @param int $count
      * @param string $server
      * @return string
-	 */
-	public function ircWhowas($nickname, $count = null, $server = null)
-	{
+     */
+    public function ircWhowas($nickname, $count = null, $server = null)
+    {
         return $this->getIrcMessage('WHOWAS', array($nickname, $count, $server));
-	}
+    }
 
     /**
-	 * Returns a KILL message.
+     * Returns a KILL message.
      *
      * @param string $nickname
      * @param string $comment
      * @return string
-	 */
-	public function ircKill($nickname, $comment)
-	{
+     */
+    public function ircKill($nickname, $comment)
+    {
         return $this->getIrcMessage('KILL', array($nickname, $comment));
-	}
+    }
 
     /**
-	 * Returns a PING message.
+     * Returns a PING message.
      *
      * @param string $server1
      * @param string $server2
      * @return string
-	 */
-	public function ircPing($server1, $server2 = null)
-	{
+     */
+    public function ircPing($server1, $server2 = null)
+    {
         return $this->getIrcMessage('PING', array($server1, $server2));
-	}
+    }
 
     /**
-	 * Returns a PONG message.
+     * Returns a PONG message.
      *
      * @param string $daemon
      * @param string $daemon2
      * @return string
-	 */
-	public function ircPong($daemon, $daemon2 = null)
-	{
+     */
+    public function ircPong($daemon, $daemon2 = null)
+    {
         return $this->getIrcMessage('PONG', array($daemon, $daemon2));
-	}
+    }
 
     /**
-	 * Returns an ERROR message.
+     * Returns an ERROR message.
      *
      * @param string $message
      * @return string
-	 */
-	public function ircError($message)
-	{
+     */
+    public function ircError($message)
+    {
         return $this->getIrcMessage('ERROR', array($message));
-	}
+    }
 
     /**
-	 * Returns an AWAY message.
+     * Returns an AWAY message.
      *
      * @param string $message
      * @return string
-	 */
-	public function ircAway($message = null)
-	{
+     */
+    public function ircAway($message = null)
+    {
         return $this->getIrcMessage('AWAY', array($message));
-	}
+    }
 
     /**
-	 * Returns a REHASH message.
+     * Returns a REHASH message.
      *
      * @return string
-	 */
-	public function ircRehash()
-	{
+     */
+    public function ircRehash()
+    {
         return $this->getIrcMessage('REHASH');
-	}
+    }
 
     /**
-	 * Returns a RESTART message.
+     * Returns a RESTART message.
      *
      * @return string
-	 */
-	public function ircRestart()
-	{
+     */
+    public function ircRestart()
+    {
         return $this->getIrcMessage('RESTART');
-	}
+    }
 
     /**
-	 * Returns a SUMMON message.
+     * Returns a SUMMON message.
      *
      * @param string $user
      * @param string $server
      * @return string
-	 */
-	public function ircSummon($user, $server = null)
-	{
+     */
+    public function ircSummon($user, $server = null)
+    {
         return $this->getIrcMessage('SUMMON', array($user, $server));
-	}
+    }
 
     /**
-	 * Returns a USERS message.
+     * Returns a USERS message.
      *
      * @param string $server
      * @return string
-	 */
-	public function ircUsers($server = null)
-	{
+     */
+    public function ircUsers($server = null)
+    {
         return $this->getIrcMessage('USERS', array($server));
-	}
+    }
 
     /**
-	 * Returns a WALLOPS message.
+     * Returns a WALLOPS message.
      *
      * @param string $text
      * @return string
-	 */
-	public function ircWallops($text)
-	{
+     */
+    public function ircWallops($text)
+    {
         return $this->getIrcMessage('WALLOPS', array($text));
-	}
+    }
 
     /**
-	 * Returns a USERHOST message.
+     * Returns a USERHOST message.
      *
      * @param string $nickname1
      * @param string $nickname2
@@ -520,22 +520,22 @@ class Generator implements GeneratorInterface
      * @param string $nickname4
      * @param string $nickname5
      * @return string
-	 */
-	public function ircUserhost($nickname1, $nickname2 = null, $nickname3 = null, $nickname4 = null, $nickname5 = null)
-	{
+     */
+    public function ircUserhost($nickname1, $nickname2 = null, $nickname3 = null, $nickname4 = null, $nickname5 = null)
+    {
         return $this->getIrcMessage('USERHOST', array($nickname1, $nickname2, $nickname3, $nickname4, $nickname5));
-	}
+    }
 
     /**
-	 * Returns an ISON message.
+     * Returns an ISON message.
      *
      * @param string $nicknames
      * @return string
-	 */
-	public function ircIson($nicknames)
-	{
+     */
+    public function ircIson($nicknames)
+    {
         return $this->getIrcMessage('ISON', array($nicknames));
-	}
+    }
 
     /**
      * Returns a CTCP request.
@@ -569,9 +569,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpFinger($receivers)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'FINGER');
-	}
+    }
 
     /**
      * Returns a CTCP FINGER reply message.
@@ -582,9 +582,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpFingerResponse($nickname, $text)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'FINGER ' . $text);
-	}
+    }
 
     /**
      * Returns a CTCP VERSION message.
@@ -594,9 +594,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpVersion($receivers)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'VERSION');
-	}
+    }
 
     /**
      * Returns a CTCP VERSION reply message.
@@ -609,9 +609,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpVersionResponse($nickname, $name, $version, $environment)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'VERSION ' . $name . ':' . $version . ':' . $environment);
-	}
+    }
 
     /**
      * Returns a CTCP SOURCE message.
@@ -621,9 +621,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpSource($receivers)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'SOURCE');
-	}
+    }
 
     /**
      * Returns a CTCP SOURCE reply message.
@@ -636,9 +636,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpSourceResponse($nickname, $host, $directories, $files)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'SOURCE ' . $host . ':' . $directories . ':' . $files);
-	}
+    }
 
     /**
      * Returns a CTCP USERINFO message.
@@ -648,9 +648,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpUserinfo($receivers)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'USERINFO');
-	}
+    }
 
     /**
      * Returns a CTCP USERINFO reply message.
@@ -661,9 +661,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpUserinfoResponse($nickname, $text)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'USERINFO ' . $text);
-	}
+    }
 
     /**
      * Returns a CTCP CLIENTINFO message.
@@ -673,9 +673,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpClientinfo($receivers)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'CLIENTINFO');
-	}
+    }
 
     /**
      * Returns a CTCP CLIENTINFO reply message.
@@ -686,9 +686,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpClientinfoResponse($nickname, $client)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'CLIENTINFO ' . $client);
-	}
+    }
 
     /**
      * Returns a CTCP ERRMSG message.
@@ -699,9 +699,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpErrmsg($receivers, $query)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'ERRMSG ' . $query);
-	}
+    }
 
     /**
      * Returns a CTCP ERRMSG reply message.
@@ -713,9 +713,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpErrmsgResponse($nickname, $query, $message)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'ERRMSG ' . $query . ' :' . $message);
-	}
+    }
 
     /**
      * Returns a CTCP PING message.
@@ -726,9 +726,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpPing($receivers, $timestamp)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'PING ' . $timestamp);
-	}
+    }
 
     /**
      * Returns a CTCP PING reply message.
@@ -739,9 +739,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpPingResponse($nickname, $timestamp)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'PING ' . $timestamp);
-	}
+    }
 
     /**
      * Returns a CTCP TIME message.
@@ -751,9 +751,9 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpTime($receivers)
-	{
+    {
         return $this->getCtcpRequest($receivers, 'TIME');
-	}
+    }
 
     /**
      * Returns a CTCP TIME reply message.
@@ -764,7 +764,7 @@ class Generator implements GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpTimeResponse($nickname, $time)
-	{
+    {
         return $this->getCtcpResponse($nickname, 'TIME ' . $time);
-	}
+    }
 }
