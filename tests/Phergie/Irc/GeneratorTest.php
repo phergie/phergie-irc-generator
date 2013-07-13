@@ -75,6 +75,7 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
             array('ircNick', "NICK nickname :2\r\n", array('nickname', '2')),
 
             array('ircUser', "USER username hostname servername :realname\r\n", array('username', 'hostname', 'servername', 'realname')),
+            array('ircUser', "USER username 0 0 :realname\r\n", array('username', '0', '0', 'realname')),
 
             array('ircServer', "SERVER servername 2 :info\r\n", array('servername', '2', 'info')),
 

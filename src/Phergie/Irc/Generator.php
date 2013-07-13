@@ -50,7 +50,9 @@ class Generator implements GeneratorInterface
         }
         $message .= $type;
 
-        $params = array_filter($params);
+        $params = array_filter($params, function($param) {
+		return $param !== null;
+	});
         if ($params) {
             $last = end($params);
             $params[key($params)] = ':' . $last; 
