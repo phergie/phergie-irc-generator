@@ -12,7 +12,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 {
     "minimum-stability": "dev",
     "require": {
-        "phergie/phergie-irc-generator": "1.0.0"
+        "phergie/phergie-irc-generator": "1.1.0"
     }
 }
 ```
