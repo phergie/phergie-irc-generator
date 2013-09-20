@@ -212,6 +212,10 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
 
             array('ctcpTimeResponse', "NOTICE nickname :\001TIME time\001\r\n", array('nickname', 'time')),
 
+            array('ctcpAction', "PRIVMSG receivers :\001ACTION action\001\r\n", array('receivers', 'action')),
+
+            array('ctcpActionResponse', "NOTICE nickname :\001ACTION action\001\r\n", array('nickname', 'action')),
+
         );
     }
 }

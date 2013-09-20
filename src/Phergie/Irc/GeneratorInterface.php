@@ -584,4 +584,24 @@ interface GeneratorInterface
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpTimeResponse($nickname, $time);
+
+    /**
+     * Returns a CTCP ACTION message.
+     *
+     * @para string $receivers
+     * @param string $action
+     * @return string
+     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
+     */
+    public function ctcpAction($receivers, $action);
+
+    /**
+     * Returns a CTCP ACTION reply message.
+     *
+     * @param string $nickname
+     * @param string $action
+     * @return string
+     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
+     */
+    public function ctcpActionResponse($nickname, $action);
 }

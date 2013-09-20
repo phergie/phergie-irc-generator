@@ -51,8 +51,8 @@ class Generator implements GeneratorInterface
         $message .= $type;
 
         $params = array_filter($params, function($param) {
-		return $param !== null;
-	});
+            return $param !== null;
+        });
         if ($params) {
             $last = end($params);
             $params[key($params)] = ':' . $last; 
@@ -768,5 +768,31 @@ class Generator implements GeneratorInterface
     public function ctcpTimeResponse($nickname, $time)
     {
         return $this->getCtcpResponse($nickname, 'TIME ' . $time);
+    }
+
+    /**
+     * Returns a CTCP ACTION message.
+     *
+     * @param string $receivers
+     * @param string $action
+     * @return string
+     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
+     */
+    public function ctcpAction($receivers, $action)
+    {
+        return $this->getCtcpRequest($receivers, 'ACTION ' . $action);
+    }
+
+    /**
+     * Returns a CTCP ACTION reply message.
+     *
+     * @param string $nickname
+     * @param string $action
+     * @return string
+     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
+     */
+    public function ctcpActionResponse($nickname, $action)
+    {
+        return $this->getCtcpResponse($nickname, 'ACTION ' . $action);
     }
 }
