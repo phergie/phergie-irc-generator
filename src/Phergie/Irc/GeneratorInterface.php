@@ -33,7 +33,7 @@ interface GeneratorInterface
     /**
      * Returns a PASS message.
      *
-     * @parm string $password
+     * @param string $password
      * @return string
      * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_1
      */
@@ -588,7 +588,7 @@ interface GeneratorInterface
     /**
      * Returns a CTCP ACTION message.
      *
-     * @para string $receivers
+     * @param string $receivers
      * @param string $action
      * @return string
      * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
