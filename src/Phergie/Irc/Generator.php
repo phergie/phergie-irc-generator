@@ -66,7 +66,7 @@ class Generator implements GeneratorInterface
     /**
      * Returns a PASS message.
      *
-     * @parm string $password
+     * @param string $password
      * @return string
      */
     public function ircPass($password)
