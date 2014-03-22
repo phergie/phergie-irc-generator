@@ -12,13 +12,13 @@ namespace Phergie\Irc;
 
 /**
  * Programmatically generates strings containing messages conforming to those
- * in the IRC protocol as described in RFC 1459.
+ * in the IRC protocol as described in RFCs 1459 and 2812.
  *
  * @category Phergie
  * @package Phergie\Irc
- * @link http://irchelp.org/irchelp/rfc/chapter2.html#c2_3
- * @link http://irchelp.org/irchelp/rfc/chapter4.html
- * @link http://irchelp.org/irchelp/rfc/chapter5.html
+ * @link https://tools.ietf.org/html/rfc2812#section-2.3
+ * @link https://tools.ietf.org/html/rfc2812#section-3
+ * @link https://tools.ietf.org/html/rfc2812#section-4
  */
 interface GeneratorInterface
 {
@@ -26,7 +26,7 @@ interface GeneratorInterface
      * Sets the message prefix.
      *
      * @param string $prefix
-     * @link http://irchelp.org/irchelp/rfc/chapter2.html#c2_3_1
+     * @link https://tools.ietf.org/html/rfc2812#section-2.3.1
      */
     public function setPrefix($prefix);
 
@@ -35,7 +35,7 @@ interface GeneratorInterface
      *
      * @param string $password
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_1
+     * @link https://tools.ietf.org/html/rfc2812#section-4.1.1
      */
     public function ircPass($password);
 
@@ -45,7 +45,7 @@ interface GeneratorInterface
      * @param string $nickname
      * @param int $hopcount
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_2
+     * @link https://tools.ietf.org/html/rfc2812#section-4.1.2
      */
     public function ircNick($nickname, $hopcount = null);
 
@@ -57,7 +57,7 @@ interface GeneratorInterface
      * @param string $servername
      * @param string $realname
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_3
+     * @link https://tools.ietf.org/html/rfc2812#section-4.1.3
      */
     public function ircUser($username, $hostname, $servername, $realname);
 
@@ -68,7 +68,7 @@ interface GeneratorInterface
      * @param int $hopcount
      * @param string $info
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_4
+     * @link https://tools.ietf.org/html/rfc2812#section-4.1.4
      */
     public function ircServer($servername, $hopcount, $info);
 
@@ -78,7 +78,7 @@ interface GeneratorInterface
      * @param string $user
      * @param string $password
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_5
+     * @link https://tools.ietf.org/html/rfc2812#section-4.1.5
      */
     public function ircOper($user, $password);
 
@@ -87,7 +87,7 @@ interface GeneratorInterface
      *
      * @param string $message
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_6
+     * @link https://tools.ietf.org/html/rfc2812#section-4.1.6
      */
     public function ircQuit($message = null);
 
@@ -97,7 +97,7 @@ interface GeneratorInterface
      * @param string $server
      * @param string $comment
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_1_7
+     * @link https://tools.ietf.org/html/rfc2812#section-4.1.7
      */
     public function ircSquit($server, $comment);
 
@@ -107,7 +107,7 @@ interface GeneratorInterface
      * @param string $channels
      * @param string $keys
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_1
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.1
      */
     public function ircJoin($channels, $keys = null);
 
@@ -116,7 +116,7 @@ interface GeneratorInterface
      *
      * @param string $channels
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_2
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.2
      */
     public function ircPart($channels);
 
@@ -127,7 +127,7 @@ interface GeneratorInterface
      * @param string $mode
      * @param string $param
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_3
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.3
      */
     public function ircMode($target, $mode, $param = null);
 
@@ -137,7 +137,7 @@ interface GeneratorInterface
      * @param string $channel
      * @param string $topic
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_4
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.4
      */
     public function ircTopic($channel, $topic = null);
 
@@ -146,7 +146,7 @@ interface GeneratorInterface
      *
      * @param string $channels
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_5
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.5
      */
     public function ircNames($channels);
 
@@ -156,7 +156,7 @@ interface GeneratorInterface
      * @param string $channels
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_6
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.6
      */
     public function ircList($channels = null, $server = null);
 
@@ -166,7 +166,7 @@ interface GeneratorInterface
      * @param string $nickname
      * @param string $channel
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_7
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.7
      */
     public function ircInvite($nickname, $channel);
 
@@ -177,7 +177,7 @@ interface GeneratorInterface
      * @param string $user
      * @param string $comment
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_2_8
+     * @link https://tools.ietf.org/html/rfc2812#section-4.2.8
      */
     public function ircKick($channel, $user, $comment = null);
 
@@ -186,7 +186,7 @@ interface GeneratorInterface
      *
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_1
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.1
      */
     public function ircVersion($server = null);
 
@@ -196,7 +196,7 @@ interface GeneratorInterface
      * @param string $query
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_2
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.2
      */
     public function ircStats($query, $server = null);
 
@@ -210,7 +210,7 @@ interface GeneratorInterface
      * @param string $servermask
      * @param string $remoteserver
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_3
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.3
      */
     public function ircLinks($servermask = null, $remoteserver = null);
 
@@ -219,7 +219,7 @@ interface GeneratorInterface
      *
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_4
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.4
      */
     public function ircTime($server = null);
 
@@ -230,7 +230,7 @@ interface GeneratorInterface
      * @param int $port
      * @param string $remoteserver
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_5
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.5
      */
     public function ircConnect($targetserver, $port = null, $remoteserver = null);
 
@@ -239,7 +239,7 @@ interface GeneratorInterface
      *
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_6
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.6
      */
     public function ircTrace($server = null);
 
@@ -248,7 +248,7 @@ interface GeneratorInterface
      *
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_7
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.7
      */
     public function ircAdmin($server = null);
 
@@ -257,7 +257,7 @@ interface GeneratorInterface
      *
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_3_8
+     * @link https://tools.ietf.org/html/rfc2812#section-4.3.8
      */
     public function ircInfo($server = null);
 
@@ -267,7 +267,7 @@ interface GeneratorInterface
      * @param string $receivers
      * @param string $text
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_4_1
+     * @link https://tools.ietf.org/html/rfc2812#section-4.4.1
      */
     public function ircPrivmsg($receivers, $text);
 
@@ -277,7 +277,7 @@ interface GeneratorInterface
      * @param string $nickname
      * @param string $text
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_4_2
+     * @link https://tools.ietf.org/html/rfc2812#section-4.4.2
      */
     public function ircNotice($nickname, $text);
 
@@ -287,7 +287,7 @@ interface GeneratorInterface
      * @param string $name
      * @param string $o
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_5_1
+     * @link https://tools.ietf.org/html/rfc2812#section-4.5.1
      */
     public function ircWho($name, $o = null);
 
@@ -297,7 +297,7 @@ interface GeneratorInterface
      * @param string $server
      * @param string $nickmasks
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_5_2
+     * @link https://tools.ietf.org/html/rfc2812#section-4.5.2
      */
     public function ircWhois($server, $nickmasks);
 
@@ -308,7 +308,7 @@ interface GeneratorInterface
      * @param int $count
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_5_3
+     * @link https://tools.ietf.org/html/rfc2812#section-4.5.3
      */
     public function ircWhowas($nickname, $count = null, $server = null);
 
@@ -318,7 +318,7 @@ interface GeneratorInterface
      * @param string $nickname
      * @param string $comment
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_6_1
+     * @link https://tools.ietf.org/html/rfc2812#section-4.6.1
      */
     public function ircKill($nickname, $comment);
 
@@ -328,7 +328,7 @@ interface GeneratorInterface
      * @param string $server1
      * @param string $server2
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_6_2
+     * @link https://tools.ietf.org/html/rfc2812#section-4.6.2
      */
     public function ircPing($server1, $server2 = null);
 
@@ -338,7 +338,7 @@ interface GeneratorInterface
      * @param string $daemon
      * @param string $daemon2
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_6_3
+     * @link https://tools.ietf.org/html/rfc2812#section-4.6.3
      */
     public function ircPong($daemon, $daemon2 = null);
 
@@ -347,7 +347,7 @@ interface GeneratorInterface
      *
      * @param string $message
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter4.html#c4_6_4
+     * @link https://tools.ietf.org/html/rfc2812#section-4.6.4
      */
     public function ircError($message);
 
@@ -356,7 +356,7 @@ interface GeneratorInterface
      *
      * @param string $message
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_1
+     * @link https://tools.ietf.org/html/rfc2812#section-5.1
      */
     public function ircAway($message = null);
 
@@ -364,7 +364,7 @@ interface GeneratorInterface
      * Returns a REHASH message.
      *
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_2
+     * @link https://tools.ietf.org/html/rfc2812#section-5.2
      */
     public function ircRehash();
 
@@ -372,7 +372,7 @@ interface GeneratorInterface
      * Returns a RESTART message.
      *
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_3
+     * @link https://tools.ietf.org/html/rfc2812#section-5.3
      */
     public function ircRestart();
 
@@ -382,7 +382,7 @@ interface GeneratorInterface
      * @param string $user
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_4
+     * @link https://tools.ietf.org/html/rfc2812#section-5.4
      */
     public function ircSummon($user, $server = null);
 
@@ -391,7 +391,7 @@ interface GeneratorInterface
      *
      * @param string $server
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_5
+     * @link https://tools.ietf.org/html/rfc2812#section-5.5
      */
     public function ircUsers($server = null);
 
@@ -400,7 +400,7 @@ interface GeneratorInterface
      *
      * @param string $text
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_6
+     * @link https://tools.ietf.org/html/rfc2812#section-5.6
      */
     public function ircWallops($text);
 
@@ -413,7 +413,7 @@ interface GeneratorInterface
      * @param string $nickname4
      * @param string $nickname5
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_7
+     * @link https://tools.ietf.org/html/rfc2812#section-5.7
      */
     public function ircUserhost($nickname1, $nickname2 = null, $nickname3 = null, $nickname4 = null, $nickname5 = null);
 
@@ -422,7 +422,7 @@ interface GeneratorInterface
      *
      * @param string $nicknames
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/chapter5.html#c5_8
+     * @link https://tools.ietf.org/html/rfc2812#section-5.8
      */
     public function ircIson($nicknames);
 
