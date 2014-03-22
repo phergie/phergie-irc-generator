@@ -568,7 +568,6 @@ class Generator implements GeneratorInterface
      *
      * @param string $receivers
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpFinger($receivers)
     {
@@ -581,7 +580,6 @@ class Generator implements GeneratorInterface
      * @param string $nickname
      * @param string $text
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpFingerResponse($nickname, $text)
     {
@@ -593,7 +591,6 @@ class Generator implements GeneratorInterface
      *
      * @param string $receivers
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpVersion($receivers)
     {
@@ -608,7 +605,6 @@ class Generator implements GeneratorInterface
      * @param string $version
      * @param string $environment
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpVersionResponse($nickname, $name, $version, $environment)
     {
@@ -620,7 +616,6 @@ class Generator implements GeneratorInterface
      *
      * @param string $receivers
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpSource($receivers)
     {
@@ -635,7 +630,6 @@ class Generator implements GeneratorInterface
      * @param string $directories
      * @param string $files
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpSourceResponse($nickname, $host, $directories, $files)
     {
@@ -647,7 +641,6 @@ class Generator implements GeneratorInterface
      *
      * @param string $receivers
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpUserinfo($receivers)
     {
@@ -660,7 +653,6 @@ class Generator implements GeneratorInterface
      * @param string $nickname
      * @param string $text
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpUserinfoResponse($nickname, $text)
     {
@@ -672,7 +664,6 @@ class Generator implements GeneratorInterface
      *
      * @param string $receivers
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpClientinfo($receivers)
     {
@@ -685,7 +676,6 @@ class Generator implements GeneratorInterface
      * @param string $nickname
      * @param string $client
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpClientinfoResponse($nickname, $client)
     {
@@ -698,7 +688,6 @@ class Generator implements GeneratorInterface
      * @param string $receivers
      * @param string $query
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpErrmsg($receivers, $query)
     {
@@ -712,7 +701,6 @@ class Generator implements GeneratorInterface
      * @param string $query
      * @param string $message
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpErrmsgResponse($nickname, $query, $message)
     {
@@ -725,7 +713,6 @@ class Generator implements GeneratorInterface
      * @param string $receivers
      * @param int $timestamp
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpPing($receivers, $timestamp)
     {
@@ -738,7 +725,6 @@ class Generator implements GeneratorInterface
      * @param string $nickname
      * @param int $timestamp
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpPingResponse($nickname, $timestamp)
     {
@@ -750,7 +736,6 @@ class Generator implements GeneratorInterface
      *
      * @param string $receivers
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpTime($receivers)
     {
@@ -763,7 +748,6 @@ class Generator implements GeneratorInterface
      * @param string $nickname
      * @param string $time
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpTimeResponse($nickname, $time)
     {
@@ -776,7 +760,6 @@ class Generator implements GeneratorInterface
      * @param string $receivers
      * @param string $action
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpAction($receivers, $action)
     {
@@ -789,7 +772,6 @@ class Generator implements GeneratorInterface
      * @param string $nickname
      * @param string $action
      * @return string
-     * @link http://irchelp.org/irchelp/rfc/ctcpspec.html
      */
     public function ctcpActionResponse($nickname, $action)
     {
