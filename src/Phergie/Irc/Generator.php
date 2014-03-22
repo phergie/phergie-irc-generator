@@ -164,11 +164,12 @@ class Generator implements GeneratorInterface
      * Returns a PART message.
      *
      * @param string $channels
+     * @param string $message
      * @return string
      */
-    public function ircPart($channels)
+    public function ircPart($channels, $message = null)
     {
-        return $this->getIrcMessage('PART', array($channels));
+        return $this->getIrcMessage('PART', array($channels, $message));
     }
 
     /**

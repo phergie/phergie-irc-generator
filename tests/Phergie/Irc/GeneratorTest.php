@@ -90,6 +90,7 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
             array('ircJoin', "JOIN #channel :key\r\n", array('#channel', 'key')),
 
             array('ircPart', "PART :#channel\r\n", array('#channel')),
+            array('ircPart', "PART #channel :message\r\n", array('#channel', 'message')),
 
             array('ircMode', "MODE #channel :-s\r\n", array('#channel', '-s')),
             array('ircMode', "MODE #channel l :2\r\n", array('#channel', 'l', '2')),

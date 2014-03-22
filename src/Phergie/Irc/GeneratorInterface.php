@@ -115,10 +115,11 @@ interface GeneratorInterface
      * Returns a PART message.
      *
      * @param string $channels
+     * @param string $message
      * @return string
      * @link https://tools.ietf.org/html/rfc2812#section-4.2.2
      */
-    public function ircPart($channels);
+    public function ircPart($channels, $message = null);
 
     /**
      * Returns a MODE message.
