@@ -53,8 +53,7 @@ To run the unit test suite:
 ```
 curl -s https://getcomposer.org/installer | php
 php composer.phar install
-cd tests
-../vendor/bin/phpunit Phergie/Irc/GeneratorTest.php
+./vendor/bin/phpunit Phergie/Irc/GeneratorTest.php
 ```
 
 ## License
