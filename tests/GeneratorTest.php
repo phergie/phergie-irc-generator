@@ -183,6 +183,8 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
 
             array('ircIson', "ISON :nicknames\r\n", array('nicknames')),
 
+            array('ircProtoctl', "PROTOCTL :NAMESX\r\n", array('NAMESX')),
+
             array('ctcpFinger', "PRIVMSG receivers :\001FINGER\001\r\n", array('receivers')),
 
             array('ctcpFingerResponse', "NOTICE nickname :\001FINGER text\001\r\n", array('nickname', 'text')),

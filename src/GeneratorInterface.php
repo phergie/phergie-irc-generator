@@ -428,6 +428,14 @@ interface GeneratorInterface
     public function ircIson($nicknames);
 
     /**
+     * Returns a PROTOCTL message.
+     *
+     * @param string $proto
+     * @return string
+     */
+    public function ircProtoctl($proto);
+
+    /**
      * Returns a CTCP FINGER message.
      *
      * @param string $receivers

@@ -541,6 +541,17 @@ class Generator implements GeneratorInterface
     }
 
     /**
+     * Returns a PROTOCTL message.
+     *
+     * @param string $proto
+     * @return string
+     */
+    public function ircProtoctl($proto)
+    {
+        return $this->getIrcMessage('PROTOCTL', array($proto));
+    }
+
+    /**
      * Returns a CTCP request.
      *
      * @param string $receivers
