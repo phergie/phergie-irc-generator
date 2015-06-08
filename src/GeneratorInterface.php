@@ -295,12 +295,12 @@ interface GeneratorInterface
     /**
      * Returns a WHOIS message.
      *
-     * @param string $server
      * @param string $nickmasks
+     * @param string $server
      * @return string
      * @link https://tools.ietf.org/html/rfc2812#section-4.5.2
      */
-    public function ircWhois($server, $nickmasks);
+    public function ircWhois($nickmasks, $server = null);
 
     /**
      * Returns a WHOWAS message.

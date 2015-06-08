@@ -380,11 +380,11 @@ class Generator implements GeneratorInterface
     /**
      * Returns a WHOIS message.
      *
-     * @param string $server
      * @param string $nickmasks
+     * @param string $server
      * @return string
      */
-    public function ircWhois($server, $nickmasks)
+    public function ircWhois($nickmasks, $server = null)
     {
         return $this->getIrcMessage('WHOIS', array($server, $nickmasks));
     }

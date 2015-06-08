@@ -144,7 +144,7 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
             array('ircWho', "WHO :name\r\n", array('name')),
             array('ircWho', "WHO name :o\r\n", array('name', 'o')),
 
-            array('ircWhois', "WHOIS server :nickmasks\r\n", array('server', 'nickmasks')),
+            array('ircWhois', "WHOIS server :nickmasks\r\n", array('nickmasks', 'server')),
 
             array('ircWhowas', "WHOWAS :nickname\r\n", array('nickname')),
             array('ircWhowas', "WHOWAS nickname :2\r\n", array('nickname', '2')),
