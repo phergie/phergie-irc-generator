@@ -125,8 +125,8 @@ interface GeneratorInterface
      * Returns a MODE message.
      *
      * @param string $target
-     * @param string $mode
-     * @param string $param
+     * @param string|null $mode
+     * @param string|null $param
      * @return string
      * @link https://tools.ietf.org/html/rfc2812#section-4.2.3
      */
