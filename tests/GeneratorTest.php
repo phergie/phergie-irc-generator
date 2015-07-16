@@ -97,7 +97,7 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
             array('ircMode', "MODE #channel :-s\r\n", array('#channel', '-s')),
             array('ircMode', "MODE #channel l :2\r\n", array('#channel', 'l', '2')),
             array('ircMode', "MODE nickname :+i\r\n", array('nickname', '+i')),
-            array('ircMode', "MODE #channel\r\n", array('#channel')),
+            array('ircMode', "MODE :#channel\r\n", array('#channel')),
 
             array('ircTopic', "TOPIC :#channel\r\n", array('#channel')),
             array('ircTopic', "TOPIC #channel :topic\r\n", array('#channel', 'topic')),
