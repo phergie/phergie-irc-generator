@@ -180,7 +180,7 @@ class Generator implements GeneratorInterface
      * @param string $param
      * @return string
      */
-    public function ircMode($target, $mode, $param = null)
+    public function ircMode($target, $mode = null, $param = null)
     {
         return $this->getIrcMessage('MODE', array($target, $mode, $param));
     }
