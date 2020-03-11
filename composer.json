@@ -1,4 +1,5 @@
 {
+    "abandoned": true,
     "minimum-stability": "dev",
     "name": "phergie/phergie-irc-generator",
     "description": "Generator for messages conforming to the IRC protocol",
